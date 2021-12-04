@@ -11,36 +11,38 @@
 import random
 
 
-def trial ():
+def get_Numbers ():
+    score = 0
     user_Input = "yes"
     while user_Input [0] == "y":
         first = int (input ("Enter first number, from 0-9:  "))
         second = int (input ("Enter second number, 0-9:  "))
         third = int (input("Enter third number: "))
-
         gen1 = random.randint (0,9)
         gen2 = random.randint (0,9)
         gen3 = random.randint (0,9)
-
-        score = 0
+        print (f"Lottery numbers are: {gen1}, {gen2}, {gen3}")
 
         if first == gen1 or gen2 or gen3:
             score += 1
-        if second == gen1 or gen2 or gen3:
-            score += 1
-        if third == gen1 or gen2 or gen3:
-            score += 1
-        
+        else:
+            score += 0
+            if second == gen1 or gen2 or gen3:
+                score += 1
+            else:
+                score += 0
+                if third == gen1 or gen2 or gen3:
+                    score += 1
+                else:
+                    score += 0  
         if score == 3:
             print ("Winner!")
         else:
             print ("You lose")
-        
-        user_Input = input ("Try again? y/n")
+        user_Input = input ("Try again? y/n:   ")
     else:
         exit ()
 
-
-trial()
+get_Numbers()
 
 
