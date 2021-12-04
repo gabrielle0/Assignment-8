@@ -7,9 +7,7 @@
 # If the user enter “y” the user will play again
 # if “n” the program will exit
 
-
 import random
-
 
 def get_Numbers ():
     score = 0

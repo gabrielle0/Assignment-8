@@ -8,7 +8,6 @@
 import random
 
 random_Number = random.randint (0, 100)
-print (f"{random_Number}")
 
 def check_Number (random_Number):
     user_Input = int (input (f"What is the number?  "))
